@@ -1,0 +1,44 @@
+.widget_tag_cloud .tagcloud a.toggler {
+	display: none;
+}
+
+@media all and ( max-width: 480px ) {
+	.widget_tag_cloud .tagcloud {
+		background-color: rgb( 247, 247, 247 );
+		border: 2px solid rgb( 228, 228, 228 );
+		height: 30px;
+		overflow: hidden;
+	}
+
+	.widget_tag_cloud .tagcloud.toggled {
+		height: auto;
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+
+	.widget_tag_cloud .tagcloud a.toggler {
+		display: block;
+		position: relative;
+	}
+
+	.widget_tag_cloud .tagcloud a.toggler:after {
+		content: "\25BC";
+		display: block;
+		font-size: 14px;
+		position: absolute;
+		right: 10px;
+		top: 0;
+		line-height: 28px;
+	}
+
+	.widget_tag_cloud .tagcloud.toggled a.toggler {
+		display: none;
+	}
+
+	.widget_tag_cloud .tagcloud a {
+		display: block;
+		font-size: 1em !important;
+		line-height: 22px;
+		padding: 3px 5px;
+	}
+}
